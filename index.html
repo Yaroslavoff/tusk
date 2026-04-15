@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сканер удачи 3000</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: white;
+      color: #333;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Сканер удачи 3000</h1>
+  <p>Нажмите кнопку, чтобы узнать уровень вашей удачи сегодня</p>
+  <button onclick="scanLuck()">Сканировать</button>
+
+  <div id="result"></div>
+
+  <script>
+    function scanLuck() {
+      const results = [
+        "🚀 Удача зашкаливает! Сегодня твой день!",
+        "🙂 Неплохо, но можно лучше",
+        "😅 Сегодня лучше не рисковать",
+        "🔥 Ты везунчик уровня легенды!",
+        "💀 Лучше остаться дома..."
+      ];
+      const random = Math.floor(Math.random() * results.length);
+      document.getElementById("result").innerText = results[random];
+    }
+  </script>
+</body>
+</html>
